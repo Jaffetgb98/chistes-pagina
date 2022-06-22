@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoPService } from '../info-p.service';
+import { InfoPService } from '../info-p.service'; 
 
 
 @Component({
@@ -9,10 +9,10 @@ import { InfoPService } from '../info-p.service';
 })
 export class PrincipalComponent implements OnInit {
 
-  informacionRecibida={}
+  infoRecibida:any={}
     constructor(private varServicio:InfoPService) {
       varServicio.obtenerChistesRandom().subscribe((data)=>{
-        this.informacionRecibida=data
+        this.infoRecibida=data
         console.log("listo")
       })
 
