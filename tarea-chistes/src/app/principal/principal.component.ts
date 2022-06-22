@@ -9,17 +9,15 @@ import { InfoPService } from '../info-p.service';
 })
 export class PrincipalComponent implements OnInit {
 
-  informacionRecibida:any={}
-    constructor(private variableServicio:InfoPService) {
-      variableServicio.obtenerChistesRandom().subscribe((data)=>{
+  informacionRecibida={}
+    constructor(private varServicio:InfoPService) {
+      varServicio.obtenerChistesRandom().subscribe((data)=>{
         this.informacionRecibida=data
         console.log("listo")
       })
 
     }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 
   }
 
