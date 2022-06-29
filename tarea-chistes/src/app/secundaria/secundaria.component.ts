@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { InfoPService } from '../info-p.service';
 @Component({
   selector: 'app-secundaria',
   templateUrl: './secundaria.component.html',
@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecundariaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private variableServicio:InfoPService) {
+    
+   }
 
   ngOnInit(): void {
   }
